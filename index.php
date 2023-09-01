@@ -239,40 +239,31 @@
         <h2>Часто задаваемые вопросы</h2>
         <p>Пожалуйста, прежде чем задавать вопрос тех поддержке, прочтите это</p>
     </div>
-
-    <!-- Аккордеон с вопросами и ответами -->
-    <div class="accordion" id="faqAccordion">
-        <!-- Вопрос 1 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			<!-- Список вопросов и ответов -->
+			<div class="accordion" id="faqAccordion">
+				<!-- Вопрос 1 -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne"> <button class="accordion-button accordion-toggle-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                     Можно ли курить/пить на территории зоопарка?
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    Нет. На территории нашего зоопарка по соображениям безопасности это запрещено.
-                </div>
-            </div>
-        </div>
-
-        <!-- Вопрос 2 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Можно ли прийти со своей едой и напитками?
-                </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                    Конечно! Мы будем только рады, если вы уйдёте от нас сытыми и довольными. Мы можем предложить вам свою собствуенную кухню.
-                </div>
-            </div>
-        </div>
-
-        <!-- Остальные вопросы аналогичным образом... -->
-    </div>
-</section>
+                    </button> </h2>
+					<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">Нет. На территории нашего зоопарка по соображениям безопасности это запрещено.</div>
+					</div>
+				</div>
+				<!-- Вопрос 2 -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo"> <button class="accordion-button accordion-toggle-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Можно ли прийти со своей едой и напитками?
+                    </button> </h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">Конечно! Мы будем только рады, если вы уйдёте от нас сытыми и довольными. Мы можем предложить вам свою собствуенную кухню.</div>
+					</div>
+				</div>
+				
+				<!-- Добавьте аналогично другие вопросы и ответы -->
+			</div>
+		</div>
+	</section>
 
   <!-- Секция "Контакты" -->
 <section id="contacts" class="container my-5">

@@ -1,0 +1,190 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #4d4d4d;
+    background-color: #f4f4f4;
+}
+
+/* Section styles */
+#about {
+    background: #ffffff;
+    padding: 60px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about h1, #about h2 {
+    color: #6b8e23; /* Olive green color */
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Image styles */
+#about img {
+    margin-bottom: 40px;
+    max-width: 200px;  /* Adjust based on the actual logo size */
+}
+
+/* Centered text block */
+.text-center {
+    text-align: center;
+}
+
+/* Row styles */
+.row {
+    margin-bottom: 30px;
+}
+
+/* Column styles */
+.col {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+/* To give a bit of space between columns */
+.col + .col {
+    margin-left: 20px;
+}
+
+/* Section styles */
+#for-three {
+    background: linear-gradient(135deg, #E9F5E3 0%, #F9E2D2 100%); /* Soft gradient background */
+    padding: 60px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#for-three h2 {
+    color: #6b8e23; /* Olive green color */
+    margin-bottom: 20px;
+}
+
+#for-three h3 {
+    color: #d2691e; /* Chocolate color for subheading */
+    margin-bottom: 10px;
+}
+
+#for-three p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Button styles */
+#for-three .btn-primary {
+    background-color: #6b8e23; /* Olive green color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#for-three .btn-primary:hover {
+    background-color: #556b2f; /* Darker olive green on hover */
+}
+
+/* Modal styles */
+.modal-content {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px;
+}
+
+.modal-title {
+    font-size: 24px;
+    color: #6b8e23; /* Olive green color */
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    border-top: 1px solid #e0e0e0;
+    padding: 20px;
+}
+
+/* Form styles */
+.form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
+
+/* Note styles */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #6b8e23; /* Olive green color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #556b2f; /* Darker olive green on hover */
+}
+
+.btn-secondary {
+    background-color: #d2691e; /* Chocolate color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #a0522d; /* Darker chocolate color on hover */
+}
+
+/* Section styles */
+#for-companies {
+    background: linear-gradient(135deg, #FFF0E0 0%, #FFE8D1 100%); /* Soft gradient background */
+    padding: 60px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#for-companies h2, #for-companies h3 {
+    color: #6b8e23; /* Olive green color */
+    margin-bottom: 20px;
+}
+
+#for-companies p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Button styles */
+#for-companies .btn-primary {
+    background-color: #6b8e23; /* Olive green color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#for-companies .btn-primary:hover {
+    background-color: #556b2f; /* Darker olive green on hover */
+}
