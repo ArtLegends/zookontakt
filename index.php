@@ -28,6 +28,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">О нас</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#for-three">До 3-ёх человек</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#for-companies">Для компаний</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts">Контакты</a>
+                    </li>
                     <!-- Другие ссылки на разделы -->
                 </ul>
             </div>
@@ -44,7 +56,7 @@
         </div>
 
         <!-- Блок 2 -->
-        <div>
+        <div class="mb-4">
             <h2>Наш адрес</h2>
             <p><?php echo $address; ?></p>
         </div>
@@ -92,25 +104,25 @@
         <h2>Предложения для пар</h2>
         <h3>Тариф "Возлюбленные"</h3>
         <p>Безлимитное нахождение на територии зоопарка, Специальный корм для всех видов животных</p>
-        <p>10:00-20:00, 24900</p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-tariff="Возлюбленные">
+        <p>10:00-20:00, 24900₸</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-tariff="Возлюбленные" data-time="10:00-20:00">
             Забронировать
         </button>
     </div>
 
     <!-- Блок 6 -->
-    <div>
+    <div class="mb-4">
         <h2>Для одного</h2>
         <h3>Тариф "Для одного"</h3>
         <p>Безлимитное нахождение на територии зоопарка, Специальный корм для всех видов животных</p>
-        <p>10:00-20:00, 14900</p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-tariff="Для одного">
+        <p>10:00-20:00, 14900₸</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-tariff="Для одного" data-time="10:00-20:00">
             Забронировать
         </button>
     </div>
 </section>
 
-  <!-- Модальное окно -->
+<!-- Модальное окно -->
 <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -126,7 +138,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="phone" class="form-label">Контактный номер телефона</label>
-                        <input type="tel" class="form-control" id="phone" required>
+                        <input type="tel" class="form-control" id="phone" pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" placeholder="+7 (999) 999-9999" required maxlength="13">
                     </div>
                     <div class="mb-3">
                         <label for="date" class="form-label">Дата посещения</label>
@@ -134,14 +146,14 @@
                     </div>
                     <div class="mb-3">
                         <label for="arrival-time" class="form-label">Ориентировочное время прибытия</label>
-                        <input type="time" class="form-control" id="arrival-time" required>
+                        <input type="time" class="form-control" id="arrival-time" required min="10:00" max="20:00">
                     </div>
                     <div class="mb-3">
                         <p>Дополнительные услуги:</p>
                         <!-- Чекбоксы для доп. услуг -->
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="5000" id="photoSession">
-                            <label class="form-check-label" for="photoSession">Фотосессия (5000)</label>
+                            <label class="form-check-label" for="photoSession">Фотосессия (5000₸)</label>
                         </div>
                         <!-- Другие чекбоксы... -->
                     </div>
@@ -149,7 +161,7 @@
                         <p>Примечание: "В случае выбора доп. услуг, менеджер свяжется для уточнения".</p>
                     </div>
                     <div class="mb-3">
-                        <p>Итоговая сумма: <span id="totalAmount">0</span></p>
+                        <p>Итоговая сумма: <span id="totalAmount">0₸</span></p>
                     </div>
                 </form>
             </div>
@@ -170,67 +182,16 @@
     </div>
 
     <!-- Тарифы -->
-    <div>
+    <div class="mb-4">
         <h3>Тариф "Семейный"</h3>
         <p>Безлимитное нахождение на територии зоопарка, Специальный корм для всех видов животных</p>
-        <p>Цена: 12900 за одного человека</p>
+        <p>Цена: 12900₸ за одного человека</p>
         <p>Количество человек: от 3</p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#companyBookingModal" data-tariff="Семейный">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-tariff="Семейный">
             Забронировать
         </button>
     </div>
 </section>
-
-<!-- Модальное окно для бронирования для компаний -->
-<div class="modal fade" id="companyBookingModal" tabindex="-1" aria-labelledby="companyBookingModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="companyBookingModalLabel">Бронирование билета</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="companyBookingForm">
-                    <div class="mb-3">
-                        <label for="companyName" class="form-label">Ф.И.О</label>
-                        <input type="text" class="form-control" id="companyName" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="companyPhone" class="form-label">Контактный номер телефона</label>
-                        <input type="tel" class="form-control" id="companyPhone" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="companyDate" class="form-label">Дата посещения</label>
-                        <input type="date" class="form-control" id="companyDate" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="companyArrival-time" class="form-label">Ориентировочное время прибытия</label>
-                        <input type="time" class="form-control" id="companyArrival-time" required>
-                    </div>
-                    <div class="mb-3">
-                        <p>Дополнительные услуги:</p>
-                        <!-- Чекбоксы для доп. услуг -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="5000" id="companyPhotoSession">
-                            <label class="form-check-label" for="companyPhotoSession">Фотосессия (5000)</label>
-                        </div>
-                        <!-- Другие чекбоксы... -->
-                    </div>
-                    <div class="mb-3">
-                        <p>Примечание: "В случае выбора доп. услуг, менеджер свяжется для уточнения".</p>
-                    </div>
-                    <div class="mb-3">
-                        <p>Итоговая сумма: <span id="companyTotalAmount">0</span></p>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                <button type="submit" form="companyBookingForm" class="btn btn-primary">Подтвердить</button>
-            </div>
-        </div>
-    </div>
-</div>
 
   <!-- Секция "FAQ" -->
 <section id="faq" class="container my-5">
@@ -298,7 +259,115 @@
 
   
     <!-- Подключение Bootstrap JS и Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Tariff prices
+const individualTariffPrices = {
+    "Возлюбленные": 24900,
+    "Для одного": 14900,
+    "Семейный": 12900
+};
+
+let currentIndividualTariff = null;
+let currentCompanyTariff = null;
+let individualTotalAmount = 0;
+let companyTotalAmount = 0;
+
+// Function to update the total amount display for individual
+function updateIndividualTotalAmount() {
+    document.getElementById('totalAmount').textContent = individualTotalAmount + "₸";
+}
+
+// Function to update the total amount display for company
+function updateCompanyTotalAmount() {
+    document.getElementById('companyTotalAmount').textContent = companyTotalAmount + "₸";
+}
+
+// Event listener for individual tariff selection
+document.querySelectorAll('.btn[data-tariff]').forEach(button => {
+    button.addEventListener('click', function() {
+        const tariff = this.getAttribute('data-tariff');
+        if (individualTariffPrices[tariff] !== undefined) {
+            currentIndividualTariff = tariff;
+            individualTotalAmount = individualTariffPrices[currentIndividualTariff];
+            updateIndividualTotalAmount();
+        } else if (companyTariffPrices[tariff] !== undefined) {
+            currentCompanyTariff = tariff;
+            companyTotalAmount = companyTariffPrices[currentCompanyTariff];
+            updateCompanyTotalAmount();
+        }
+    });
+});
+
+// Event listener for additional services checkboxes for individual
+document.querySelectorAll('#bookingModal .form-check-input').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            individualTotalAmount += parseInt(this.value);
+        } else {
+            individualTotalAmount -= parseInt(this.value);
+        }
+        updateIndividualTotalAmount();
+    });
+});
+
+// Event listener for additional services checkboxes for company
+document.querySelectorAll('#companyBookingModal .form-check-input').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            companyTotalAmount += parseInt(this.value);
+        } else {
+            companyTotalAmount -= parseInt(this.value);
+        }
+        updateCompanyTotalAmount();
+    });
+});
+
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    const phoneInput = document.getElementById('phone');
+    const phonePattern = new RegExp(phoneInput.getAttribute('pattern'));
+    
+    if (!phonePattern.test(phoneInput.value)) {
+        alert('Пожалуйста, введите номер телефона в корректном формате.');
+        event.preventDefault();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0];
+    
+    // Установка минимальной даты для поля ввода даты в первом модальном окне
+    document.getElementById('date').setAttribute('min', formattedDate);
+});
+
+// Event listener for tariff selection
+document.querySelectorAll('.btn[data-tariff]').forEach(button => {
+    button.addEventListener('click', function() {
+        const selectedTariff = this.getAttribute('data-tariff');
+        const timeInterval = this.getAttribute('data-time') || "Не ограничено";
+        
+        // Get the arrival-time input element
+        const arrivalTimeInput = document.getElementById('arrival-time');
+        const timeIntervalElement = document.getElementById('timeInterval').querySelector('span');
+        
+        // Update time interval display
+        timeIntervalElement.textContent = timeInterval;
+        
+        // Based on the tariff, set the min and max time
+        if (selectedTariff === "Возлюбленные" || selectedTariff === "Для одного") {
+            arrivalTimeInput.min = "10:00";
+            arrivalTimeInput.max = "20:00";
+        } else {
+            arrivalTimeInput.min = "";
+            arrivalTimeInput.max = "";
+        }
+    });
+});
+
+
+    </script>
 </body>
 
 </html>
