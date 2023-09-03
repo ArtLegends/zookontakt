@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контактный зоопарк</title>
     <!-- Подключение Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -52,7 +53,7 @@
         <div class="text-center">
             <img src="path_to_logo.jpg" alt="ZOOKONTAKT" class="img-fluid">
             <h1>ОТЛИЧНАЯ ВОЗМОЖНОСТЬ ПРОВЕСТИ ДЕНЬ НА СВЕЖЕМ ВОЗДУХЕ С БЛИЗКИМИ</h1>
-            <p>Милый контактный зоопарк, который оставит вам лишь позитивные эмоции.</p>
+            <p>Милый контактный зоопарк, который оставит вам лишь позитивные эмоции</p>
         </div>
 
         <!-- Блок 2 -->
@@ -66,13 +67,16 @@
             <h2>О НАС</h2>
             <div class="row">
                 <div class="col">
-                    <p>1. НЕ ЗРЯ МЫ НАЗЫВАЕМСЯ "ЗОО КОНТАКТ" животные действительно будут находиться в зоне вашей досягаемости, вы сможете потрогать, погладить их. По соображениям безопасности, к каждому вольеру приставлена своя сиделка".</p>
+                  <h5>НЕ ЗРЯ МЫ НАЗЫВАЕМСЯ "ЗОО КОНТАКТ"</h5>
+                    <p>животные действительно будут находиться в зоне вашей досягаемости, вы сможете потрогать, погладить их. По соображениям безопасности, к каждому вольеру приставлена своя сиделка"</p>
                 </div>
                 <div class="col">
-                    <p> 2. МЫ НЕ ПРОСТО ЗООПАРК, но и целый парк развлечений. Горки для детей, песочницы, уютное кафе. Приходя к нам вы получите отдых для всей семьи.</p>
+                  <h5>МЫ НЕ ПРОСТО ЗООПАРК</h5>
+                    <p>но и целый парк развлечений. Горки для детей, песочницы, уютное кафе. Приходя к нам вы получите отдых для всей семьи</p>
                 </div>
                 <div class="col">
-                    <p>3. МЫ ЗАБОТИМСЯ О ЖИВОТНЫХ все животные привитые и находятся под постоянным наблюдением ветеринаров.</p>
+                  <h5>МЫ ЗАБОТИМСЯ О ЖИВОТНЫХ</h5>
+                    <p>все животные привитые и находятся под постоянным наблюдением ветеринаров</p>
                 </div>
             </div>
         </div>
@@ -82,16 +86,16 @@
             <h2>Наши преимущества</h2>
             <div class="row">
                 <div class="col">
-                    <p>1.Вы приятно проведете время вместе с семьей или второй половинкой. </p>
+                    <p>Вы приятно проведете время вместе с семьей или второй половинкой</p>
                 </div>
                 <div class="col">
-                    <p>2.У вас будет возможность покормить животных. </p>
+                    <p>У вас будет возможность покормить животных</p>
                 </div>
                 <div class="col">
-                    <p>3.Получите фотографии в рамочке и на магнитиках.</p>
+                    <p>Получите фотографии в рамочке и на магнитиках</p>
                 </div>
                 <div class="col">
-                    <p>4.Более 30 видов животных.</p>
+                    <p>Более 30 видов животных</p>
                 </div>
             </div>
         </div>
@@ -155,6 +159,18 @@
                             <input class="form-check-input" type="checkbox" value="5000" id="photoSession">
                             <label class="form-check-label" for="photoSession">Фотосессия (5000₸)</label>
                         </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="2500" id="magnetPhotos">
+                            <label class="form-check-label" for="magnetPhotos">Фотографии на магнитиках (2500₸)</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="2500" id="framePhotos">
+                            <label class="form-check-label" for="framePhotos">Фотографии в рамку (2500₸)</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="10000" id="animalPortrait">
+                            <label class="form-check-label" for="animalPortrait">Ручной портрет рядом с животным (10000₸)</label>
+                        </div>
                         <!-- Другие чекбоксы... -->
                     </div>
                     <div class="mb-3">
@@ -179,10 +195,7 @@
     <div class="mb-4">
         <h2>Для веселой компании</h2>
         <p>Лучший вариант провести время для компании</p>
-    </div>
-
-    <!-- Тарифы -->
-    <div class="mb-4">
+      
         <h3>Тариф "Семейный"</h3>
         <p>Безлимитное нахождение на територии зоопарка, Специальный корм для всех видов животных</p>
         <p>Цена: 12900₸ за одного человека</p>
@@ -218,6 +231,24 @@
                     </button> </h2>
 					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
 						<div class="accordion-body">Конечно! Мы будем только рады, если вы уйдёте от нас сытыми и довольными. Мы можем предложить вам свою собствуенную кухню.</div>
+					</div>
+				</div>
+        <!-- Вопрос 3 -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree"> <button class="accordion-button accordion-toggle-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Безопасно ли контактировать с животными?
+                    </button> </h2>
+					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">Все наши животные проходят ежедневный осмотр, питаются лишь отборной пищей и содержатся в лучших условиях.</div>
+					</div>
+				</div>
+        <!-- Вопрос 4 -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingFour"> <button class="accordion-button accordion-toggle-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Со скольки лет можно посетить ваш зоопарк?
+                    </button> </h2>
+					<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">Наш зоопарк можно посетить с любого возраста, однако контактировать с животными разрешается от 7 лет вместе с родителями.</div>
 					</div>
 				</div>
 				
@@ -259,8 +290,8 @@
 
   
     <!-- Подключение Bootstrap JS и Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script>
       // Tariff prices
 const individualTariffPrices = {
@@ -366,9 +397,17 @@ document.querySelectorAll('.btn[data-tariff]').forEach(button => {
     });
 });
 
+// Сброс формы и чекбоксов при закрытии модального окна
+document.getElementById('bookingModal').addEventListener('hidden.bs.modal', function() {
+    this.querySelector('form').reset();  // Сброс формы
+    individualTotalAmount = individualTariffPrices[currentIndividualTariff];  // Сброс общей суммы
+    updateIndividualTotalAmount();  // Обновление отображения суммы
+    document.querySelectorAll('#bookingModal .form-check-input').forEach(checkbox => {
+        checkbox.checked = false;  // Сброс чекбоксов
+    });
+});
 
     </script>
 </body>
 
 </html>
-

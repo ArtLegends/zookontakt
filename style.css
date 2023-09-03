@@ -1,35 +1,72 @@
 /* General styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     color: #4d4d4d;
     background-color: #f4f4f4;
 }
 
 /* Section styles */
-#about {
-    background: #ffffff;
-    padding: 60px 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Block 1 styles */
+#about .text-center img {
+    max-width: 250px;  /* Increased size of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Added shadow to the image */
 }
 
-#about h1, #about h2 {
-    color: #6b8e23; /* Olive green color */
-    margin-bottom: 20px;
-    text-align: center;
+#about .text-center h1 {
+    font-size: 2.5rem;  /* Make the title more prominent */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;  /* Slight letter spacing for better readability */
 }
 
-#about p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-/* Image styles */
-#about img {
+#about .text-center p {
+    font-size: 1rem;
     margin-bottom: 40px;
-    max-width: 200px;  /* Adjust based on the actual logo size */
 }
+
+/* Block 2 styles */
+#about > div.mb-4 h2 {
+    margin-top: 30px;  /* Added top margin */
+}
+
+/* Common styles for Block 3 and 4 columns */
+#about .row .col {
+    background: linear-gradient(135deg, #E9F5E3 0%, #F9E2D2 100%); /* Soft gradient background */
+    transition: transform 0.3s, box-shadow 0.3s;  /* Smooth transition for hover effect */
+}
+
+#about .row .col:hover {
+    transform: translateY(-10px);  /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Increased shadow on hover */
+}
+
+#about .row .col h5 {
+    font-size: 1.3rem;  /* Bigger and bolder titles */
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#about .row .col p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Dynamic positioning for Block 3 */
+#about .row:first-of-type .col:first-child,  /* First column of Block 3 */
+#about .row:first-of-type .col:last-child {  /* Last column of Block 3 */
+    margin-top: -20px;  /* Make them slightly higher */
+}
+
+#about .row:first-of-type .col:nth-child(2) {  /* Second column of Block 3 */
+    margin-top: 20px;  /* Make it slightly lower */
+}
+
+#about .row:last-of-type .col:nth-child(2),  /* Second column of Block 4 */
+#about .row:last-of-type .col:nth-child(3) {  /* Third column of Block 4 */
+    margin-top: -20px;  /* Make them slightly higher */
+}
+
 
 /* Centered text block */
 .text-center {
@@ -57,30 +94,34 @@ body {
 }
 
 /* Section styles */
-#for-three {
-    background: linear-gradient(135deg, #E9F5E3 0%, #F9E2D2 100%); /* Soft gradient background */
-    padding: 60px 0;
-    border-radius: 15px;
+/* Block 5 and 6 styles */
+#for-three > div {
+    background: linear-gradient(135deg, #E9F5E3 0%, #F9E2D2 100%); /* Soft gradient background for each block */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #for-three h2 {
-    color: #6b8e23; /* Olive green color */
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 #for-three h3 {
-    color: #d2691e; /* Chocolate color for subheading */
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #6b8e23;  /* Olive green color for subheading */
 }
 
 #for-three p {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 20px;
-    line-height: 1.6;
 }
 
-/* Button styles */
+/* Button styles for the section */
 #for-three .btn-primary {
     background-color: #6b8e23; /* Olive green color */
     border: none;
@@ -93,51 +134,35 @@ body {
     background-color: #556b2f; /* Darker olive green on hover */
 }
 
+
+/* Modal styles */
 /* Modal styles */
 .modal-content {
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.modal-header {
-    border-bottom: 1px solid #e0e0e0;
-    padding: 20px;
+    background: linear-gradient(135deg, #E9F5E3 0%, #F9E2D2 100%); /* Soft gradient background */
 }
 
 .modal-title {
-    font-size: 24px;
-    color: #6b8e23; /* Olive green color */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6b8e23;  /* Olive green color for modal heading */
 }
 
-.modal-body {
-    padding: 20px;
+.modal-body p {
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
-.modal-footer {
-    border-top: 1px solid #e0e0e0;
-    padding: 20px;
+.modal-body label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
-/* Form styles */
-.form-control {
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    padding: 10px 15px;
-}
-
-.form-check-label {
-    margin-left: 5px;
-}
-
-/* Note styles */
-p {
-    font-size: 16px;
+.modal-body .form-control {
     margin-bottom: 20px;
-    line-height: 1.6;
 }
 
-/* Button styles */
-.btn-primary {
+/* Button styles for the modal */
+.modal .btn-primary {
     background-color: #6b8e23; /* Olive green color */
     border: none;
     padding: 10px 20px;
@@ -145,42 +170,55 @@ p {
     transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
+.modal .btn-primary:hover {
     background-color: #556b2f; /* Darker olive green on hover */
 }
 
-.btn-secondary {
-    background-color: #d2691e; /* Chocolate color */
+.modal .btn-secondary {
+    background-color: #796d6d;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.btn-secondary:hover {
-    background-color: #a0522d; /* Darker chocolate color on hover */
+.modal .btn-secondary:hover {
+    background-color: #b0b0b0; /* Darker grey on hover */
+}
+
+.modal-footer {
+      border-top: 1px solid #796d6d;
 }
 
 /* Section styles */
-#for-companies {
-    background: linear-gradient(135deg, #FFF0E0 0%, #FFE8D1 100%); /* Soft gradient background */
-    padding: 60px 0;
-    border-radius: 15px;
+/* Block 6 styles */
+#for-companies > div {
+    background: linear-gradient(135deg, #E9F5E3 0%, #F9E2D2 100%); /* Soft gradient background for each block */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#for-companies h2, #for-companies h3 {
-    color: #6b8e23; /* Olive green color */
+#for-companies h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#for-companies h3 {
+    font-size: 1.5rem;
     margin-bottom: 20px;
+    font-weight: bold;
+    color: #6b8e23;  /* Olive green color for subheading */
 }
 
 #for-companies p {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 20px;
-    line-height: 1.6;
 }
 
-/* Button styles */
+/* Button styles for the section */
 #for-companies .btn-primary {
     background-color: #6b8e23; /* Olive green color */
     border: none;
@@ -194,43 +232,58 @@ p {
 }
 
 /* Section styles */
-#faq {
-    background: #ffffff;
-    padding: 60px 0;
-    border-radius: 15px;
+/* Block 7 styles */
+#faq > div.mb-4 {
+    background: linear-gradient(135deg, #E9F5E3 0%, #F9E2D2 100%); /* Soft gradient background for the heading block */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #faq h2 {
-    color: #6b8e23; /* Olive green color */
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 #faq p {
-    font-size: 16px;
-    margin-bottom: 40px;
-    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
 
 /* Accordion styles */
 .accordion-button {
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
     background-color: #f4f4f4;
-    color: #4d4d4d;
-    font-size: 16px;
-    border: 1px solid #e0e0e0;
+    color: #6b8e23;
     width: 100%;
     text-align: left;
-    border-radius: 5px;
     transition: background-color 0.3s;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #6b8e23;
 }
 
 .accordion-button:hover {
     background-color: #e9e9e9;
 }
 
-.accordion-button:not(.collapsed) {
-    background-color: #e9e9e9;
-    color: #6b8e23;
+.accordion-button:focus {
+    box-shadow: none;
 }
+
+.accordion-collapse {
+    border-top: 1px solid #e0e0e0;
+}
+
+.accordion-body {
+    font-size: 1rem;
+    color: #555;
+}
+
 
 .mb-4 {
   text-align:center;
@@ -267,6 +320,7 @@ p {
         font-size: 32px;
         margin-top: 20px;
         margin-bottom: 30px;
+        text-align: center;
     }
 
     #about p {
@@ -277,12 +331,15 @@ p {
 
 /* Common styles for the columns */
 .col {
-    display: block;  /* Make columns block elements */
+    display: flex;
     padding: 30px 20px;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
-    margin-bottom: 20px;  /* Add margin between columns */
+    margin-bottom: 20px;
     box-sizing: border-box;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 .col p {
@@ -290,3 +347,47 @@ p {
     text-align: center;
 }
 
+/* Общий вид */
+.navbar {
+    background-color: #f8f9fa;  /* светло-серый фон */
+    padding: 1rem 2rem;  /* внутренние отступы сверху/снизу и слева/справа */
+}
+
+/* Логотип */
+.navbar-brand {
+    font-weight: bold;  /* жирное начертание */
+    font-size: 1.5rem;  /* увеличенный размер шрифта */
+    color: #343a40;  /* темно-серый цвет */
+}
+
+/* Ссылки */
+.navbar-nav .nav-link {
+    margin-right: 1rem;  /* внешний отступ справа для каждой ссылки */
+    color: #343a40;  /* темно-серый цвет */
+    transition: color 0.3s ease;  /* плавный переход цвета при изменении */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;  /* цвет при наведении: синий */
+}
+
+.navbar-nav .nav-link:active {
+    color: #0056b3;  /* цвет при нажатии: темно-синий */
+}
+
+/* Подвал */
+footer {
+    border-top: 1px solid #e5e5e5;  /* тонкая граница сверху для разделения содержимого */
+}
+
+/* Ссылки в подвале */
+footer .btn-link {
+    color: #6c757d;  /* светло-серый цвет */
+    margin-right: 1.5rem;  /* внешний отступ справа для разделения ссылок */
+    transition: color 0.3s ease;  /* плавный переход цвета */
+}
+
+footer .btn-link:hover {
+    color: #495057;  /* темно-серый цвет при наведении */
+    text-decoration: none;  /* убираем подчеркивание при наведении */
+}
