@@ -30,10 +30,9 @@
 			</div>
 		</div>
 	</nav>
-	<div class="video__holder">
-		<div class="video"> <video width="100%" height="100%" style="width:100%; height:100%; object-fit: cover;" autoplay="" loop="" muted="">
-          <source src="video/zookontakt-tatralandia (1) (online-video-cutter.com).mp4" type="video/mp4">
-        </video> </div>
+	<div class="image__holder">
+		<div class="image"> <img src="image/IMG_8931_enhanced.JPG" style="width:100%; height:100%; object-fit: cover;" alt="Zoo Image">      
+    </div>
 	</div>
 	<section id="about" class="container my-5">
 		<div class="text-center">
